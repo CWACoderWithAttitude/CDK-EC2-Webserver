@@ -1,0 +1,29 @@
+{
+  "name": "CDK-EC2",
+  "version": "0.1.0",
+  "bin": {
+    "ec2": "bin/cdk-ec2.js"
+  },
+  "scripts": {
+    "build": "echo \"The build step is not required when using JavaScript!\" && exit 0",
+    "cdk": "cdk",
+    "test": "jest",
+    "diff": "cdk diff",
+    "kill": "cdk destroy",
+    "deploy": "cdk deploy --require-approval never",
+    "deploy_verbose": "cdk deploy --require-approval never --verbose | tee cdk_deploy.log 2>&1"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.90.1",
+    "@types/jest": "^26.0.20",
+    "aws-cdk": "1.90.1"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-ec2": "^1.90.1",
+    "@aws-cdk/core": "1.90.1",
+    "cdk-ec2-key-pair": "2.1.1",
+    "@aws-cdk/aws-iam": "1.90.1",
+    "@aws-cdk/aws-kms": "1.90.1",
+    "@aws-cdk/aws-lambda": "1.90.1"
+  }
+}
